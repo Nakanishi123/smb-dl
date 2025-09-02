@@ -17,8 +17,7 @@
         "backgroundColor": "#a5dc8e"
       },
       "edgeToEdgeEnabled": true,
-      "package": "kp.sanma.smbdl",
-      "usesCleartextTraffic": true
+      "package": "kp.sanma.smbdl"
     },
     "web": {
       "bundler": "metro",
@@ -43,7 +42,8 @@
           "android": {
             "compileSdkVersion": 35,
             "targetSdkVersion": 35,
-            "buildToolsVersion": "35.0.0"
+            "buildToolsVersion": "35.0.0",
+            "usesCleartextTraffic": true
           }
         }
       ]
