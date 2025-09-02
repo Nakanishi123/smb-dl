@@ -1,7 +1,8 @@
 import { Settings, useSettings } from "@/hooks/useSettings";
 import { Image } from "expo-image";
+import { Link } from "expo-router";
 import { useEffect, useState } from "react";
-import { ActivityIndicator, Alert, Button, StyleSheet, TextInput, View } from "react-native";
+import { ActivityIndicator, Alert, Button, Pressable, StyleSheet, TextInput, View } from "react-native";
 
 import ParallaxScrollView from "@/components/ParallaxScrollView";
 import { ThemedText } from "@/components/ThemedText";
@@ -64,6 +65,15 @@ export default function SettingScreen() {
 
         <Button title="Save Settings" onPress={handleSave} />
       </View>
+
+      <Link href="/license" asChild>
+        <Pressable>
+          <View style={styles.linkContainer}>
+            <ThemedText style={styles.label}>Show Licenses</ThemedText>
+            <ThemedText>{">"}</ThemedText>
+          </View>
+        </Pressable>
+      </Link>
     </ParallaxScrollView>
   );
 }
@@ -98,5 +108,11 @@ const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "space-between",
     paddingVertical: 8,
+  },
+  linkContainer: {
+    flexDirection: "row",
+    justifyContent: "space-between",
+    alignItems: "center",
+    paddingVertical: 12,
   },
 });

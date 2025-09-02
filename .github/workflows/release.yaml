@@ -26,6 +26,9 @@ jobs:
       - name: Install dependencies
         run: npm install
 
+      - name: Make licenses json file
+        run: npm run license-build
+
       - name: Generate native project
         run: npx expo prebuild --platform android --non-interactive
 
