@@ -38,6 +38,7 @@ jobs:
 
       - name: Set up Gradle properties
         run: |
+          echo "" >> android/gradle.properties
           echo "MYAPP_RELEASE_STORE_FILE=my-release-key.keystore" >> android/gradle.properties
           echo "MYAPP_RELEASE_KEY_ALIAS=${{ secrets.ANDROID_KEY_ALIAS }}" >> android/gradle.properties
           echo "MYAPP_RELEASE_STORE_PASSWORD=${{ secrets.ANDROID_KEYSTORE_PASSWORD }}" >> android/gradle.properties
