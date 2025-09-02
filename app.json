@@ -17,7 +17,8 @@
         "backgroundColor": "#a5dc8e"
       },
       "edgeToEdgeEnabled": true,
-      "package": "kp.sanma.smbdl"
+      "package": "kp.sanma.smbdl",
+      "usesCleartextTraffic": true
     },
     "web": {
       "bundler": "metro",
