@@ -8,6 +8,8 @@ on:
 jobs:
   build-and-release:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     steps:
       - name: Check out repository
         uses: actions/checkout@v5
@@ -49,6 +51,9 @@ jobs:
           cd android
           ./gradlew assembleRelease
           cd ..
+
+      - name: Tree apk
+        run: tree android/app/build/outputs/apk/release
 
       - name: Find and rename APK
         id: find_apk
