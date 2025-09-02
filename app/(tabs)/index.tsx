@@ -64,7 +64,7 @@ export default function HomeScreen() {
 
     try {
       await downloadAllFiles(files, settings.url, (prog) => setDownloadedCount(Math.round(prog * files.length)));
-      Alert.alert("Success", `${totalCount} files downloaded successfully.`);
+      Alert.alert("Success", `${files.length} files downloaded successfully.`);
     } catch (error) {
       Alert.alert("Error", "Failed to download files." + error);
     } finally {
